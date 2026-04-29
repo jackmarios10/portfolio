@@ -193,3 +193,138 @@ window.open(url, "_blank");
 });
 
 });
+
+
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+
+reveals.forEach((el)=>{
+
+const windowHeight = window.innerHeight;
+const elementTop = el.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 100){
+el.classList.add("active");
+}
+
+});
+
+});
+
+
+
+
+const form = document.getElementById("budgetForm")
+const resultado = document.getElementById("resultado")
+
+function calcular(){
+
+let tipo = parseInt(document.getElementById("tipoProjeto").value) || 0
+let paginas = parseInt(document.getElementById("paginas").value) || 0
+let design = parseInt(document.getElementById("design").value) || 0
+let integracoes = parseInt(document.getElementById("integracoes").value) || 0
+let prazo = parseInt(document.getElementById("prazo").value) || 0
+
+let precoPaginas = paginas * 20000
+
+let total = tipo + precoPaginas + design + integracoes + prazo
+
+resultado.innerText = total.toLocaleString("pt-PT") + " KZ"
+
+return total
+}
+
+document.querySelectorAll("input,select").forEach(el=>{
+el.addEventListener("change",calcular)
+})
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault()
+
+let tipoProjeto = document.getElementById("tipoProjeto")
+let paginas = document.getElementById("paginas")
+
+if(tipoProjeto.value === ""){
+alert("Selecione o tipo de projeto")
+return
+}
+
+if(paginas.value === "" || paginas.value <= 0){
+alert("Digite o número de páginas")
+return
+}
+
+let total = calcular()
+
+let mensagem =
+`Olá Jack, utilizei o simulador do seu site.
+
+Tipo de projeto: ${tipoProjeto.options[tipoProjeto.selectedIndex].text}
+Número de páginas: ${paginas.value}
+
+Orçamento estimado: ${total.toLocaleString("pt-PT")} KZ
+
+Gostaria de conversar sobre o projeto.`
+
+let numero = "244949535092"
+
+let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`
+
+window.open(url,"_blank")
+
+})
+
+
+
+
+const filters = document.querySelectorAll(".filter-btn");
+const projects = document.querySelectorAll(".project-card");
+
+filters.forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+document.querySelector(".filter-btn.active").classList.remove("active");
+
+btn.classList.add("active");
+
+const filter = btn.dataset.filter;
+
+projects.forEach(card => {
+
+if(filter === "all" || card.dataset.category === filter){
+
+card.style.display = "block";
+
+}else{
+
+card.style.display = "none";
+
+}
+
+});
+
+});
+
+});
+
+
+const progressBars = document.querySelectorAll(".progress-fill");
+
+window.addEventListener("scroll", () => {
+
+progressBars.forEach(bar => {
+
+const position = bar.getBoundingClientRect().top;
+
+if(position < window.innerHeight - 100){
+
+bar.style.width = bar.dataset.width;
+
+}
+
+});
+
+});
