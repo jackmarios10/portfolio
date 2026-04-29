@@ -288,6 +288,35 @@ body.nav-active { overflow: hidden; }
   --ionicon-stroke-width: 50px;
 }
 
+
+.btn-primary{
+
+display:flex;
+align-items:center;
+gap:8px;
+
+padding:10px 18px;
+
+border-radius:8px;
+
+background:linear-gradient(135deg,#ffffff,#d1d1d1);
+
+color:#000;
+font-weight:600;
+
+transition:.3s;
+}
+
+.btn-primary:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 8px 20px rgba(255,255,255,0.25);
+}
+
+
+
 .section {
   padding-block: var(--section-spacing);
   overflow-x: hidden;
