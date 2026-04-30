@@ -31,6 +31,7 @@ counter.innerText = target;
 
 updateCounter();
 
+});
 
 /**
  * PRELOADER
