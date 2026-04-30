@@ -2082,26 +2082,214 @@ border-radius:50%;
   #FOOTER
 \*-----------------------------------*/
 
-.footer { border-block-start: 1px solid rgba(15, 23, 42, 0.95); }
+.footer-premium{
 
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+background:#020617;
+
+color:white;
+
+padding:90px 20px 40px;
+
 }
 
-.copyright {
-  flex-grow: 1;
-  font-family: var(--fontFamily-recoleta);
+
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:50px;
+
+margin-bottom:60px;
+
 }
 
-.back-top-btn .span { display: none; }
 
-.back-top-btn {
-  color: var(--text-white);
-  padding: 32px 16px;
-  border-inline: 1px solid rgba(15, 23, 42, 0.95);
+
+.footer-logo{
+
+width:60px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.footer-brand p{
+
+color:#94a3b8;
+
+line-height:1.6;
+
+margin-bottom:20px;
+
+}
+
+
+
+.footer-social{
+
+display:flex;
+
+gap:16px;
+
+}
+
+
+
+.footer-social a{
+
+font-size:22px;
+
+color:#cbd5f5;
+
+transition:0.3s;
+
+}
+
+
+
+.footer-social a:hover{
+
+color:#38bdf8;
+
+}
+
+
+
+.footer-links h4,
+
+.footer-contact h4{
+
+margin-bottom:18px;
+
+font-size:18px;
+
+}
+
+
+
+.footer-links a{
+
+display:block;
+
+margin-bottom:10px;
+
+color:#94a3b8;
+
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+
+
+.footer-links a:hover{
+
+color:#38bdf8;
+
+}
+
+
+
+.footer-contact p{
+
+color:#94a3b8;
+
+margin-bottom:8px;
+
+}
+
+
+
+.footer-cta{
+
+display:inline-block;
+
+margin-top:16px;
+
+background:#25D366;
+
+color:white;
+
+padding:12px 18px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+
+
+.footer-cta:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+
+}
+
+
+
+.footer-bottom{
+
+border-top:1px solid #1e293b;
+
+padding-top:30px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+
+
+.footer-bottom p{
+
+color:#64748b;
+
+}
+
+
+
+.back-top-btn{
+
+display:flex;
+
+align-items:center;
+
+gap:6px;
+
+color:white;
+
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+
+
+.back-top-btn:hover{
+
+color:#38bdf8;
+
 }
 
 
