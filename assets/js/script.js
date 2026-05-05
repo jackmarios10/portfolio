@@ -359,3 +359,22 @@ bar.style.width = bar.dataset.width;
 });
 
 });
+
+
+
+
+function contactPlan(plan, price){
+
+const message = `Olá Jack, visitei o seu site e tenho interesse no plano ${plan} (${price} KZ/mês). Podemos conversar sobre o projeto?`
+
+const phone = "244949535092"
+
+const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+
+window.open(url,"_blank")
+
+}
+
+
+
+
