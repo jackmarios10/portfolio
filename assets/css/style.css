@@ -1785,7 +1785,6 @@ color:white;
 
 }
 
-
 .pricing-header{
 
 text-align:center;
@@ -1795,8 +1794,7 @@ margin-bottom:70px;
 
 }
 
-
-.pricing-tag{
+.pricing-badge{
 
 background:#1e293b;
 padding:6px 14px;
@@ -1805,7 +1803,6 @@ font-size:13px;
 
 }
 
-
 .pricing-title{
 
 font-size:36px;
@@ -1813,15 +1810,12 @@ margin-top:20px;
 
 }
 
-
 .pricing-subtitle{
 
 opacity:.7;
 margin-top:10px;
 
 }
-
-
 
 .pricing-grid{
 
@@ -1831,32 +1825,28 @@ gap:30px;
 
 }
 
-
-
 .pricing-card{
 
 background:#1e293b;
 border-radius:20px;
 padding:40px 30px;
+transition:.35s;
 position:relative;
-transition:.3s;
 
 }
-
 
 .pricing-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-12px);
+box-shadow:0 25px 60px rgba(0,0,0,.4);
 
 }
-
 
 .popular{
 
 border:2px solid #6366f1;
 
 }
-
 
 .popular-badge{
 
@@ -1871,45 +1861,12 @@ font-size:12px;
 
 }
 
-
-.plan-name{
-
-font-size:22px;
-margin-bottom:10px;
-
-}
-
-
-.plan-desc{
-
-opacity:.7;
-margin-bottom:20px;
-
-}
-
-
 .plan-price{
 
 font-size:40px;
-margin-bottom:25px;
+margin:20px 0;
 
 }
-
-
-.currency{
-
-font-size:16px;
-
-}
-
-
-.period{
-
-font-size:14px;
-opacity:.7;
-
-}
-
 
 .plan-features{
 
@@ -1918,7 +1875,6 @@ padding:0;
 margin-bottom:30px;
 
 }
-
 
 .plan-features li{
 
@@ -1929,18 +1885,17 @@ margin-bottom:12px;
 
 }
 
-
 .plan-btn,
 .plan-btn-primary{
 
-display:block;
-text-align:center;
-padding:12px;
+width:100%;
+padding:14px;
 border-radius:10px;
-text-decoration:none;
+border:none;
+cursor:pointer;
+font-size:15px;
 
 }
-
 
 .plan-btn{
 
@@ -1948,7 +1903,6 @@ background:#334155;
 color:white;
 
 }
-
 
 .plan-btn-primary{
 
@@ -1958,6 +1912,13 @@ font-weight:600;
 
 }
 
+.pricing-guarantee{
+
+text-align:center;
+margin-top:50px;
+opacity:.7;
+
+}
 
 
 
